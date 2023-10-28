@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NAVEENKUMAR -portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+
+        header {
+            background-color: rgb(0, 0, 0);
+            color: azure;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 75%;
+            object-fit: cover;
+            position: absolute;
+            top: 75px;
+            left: 75px;
+        }
+
+        nav {
+            background-color: dodgerblue;
+            color: brown;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li button {
+            background-color: dodgerblue;
+            color: antiquewhite;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .section-content {
+            background-color: skyblue;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rebeccapurple;
+        }
+
+        /* Add sky blue background to the Skills section */
+        #skills .section-content {
+            background-color: skyblue;
+            box-shadow: 0 0 10px rebeccapurple;
+        }
+
+        .download-button {
+            background-color: coral;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .download-button:hover {
+            background-color: darkorange;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: darkred;
+            color: black;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <!-- Add your profile picture here -->
+        <img src="sabarish.jpg" alt="your profile picture" class="profile-picture">
+        <h1>NAVEENKUMAR</h1>
+        <p>COMPUTER SCIENCE STUDENT</p>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <!-- Changed navigation links to buttons with onclick event -->
+        <li><button onclick="scrollToSection('about')">ABOUT</button></li>
+        <li><button onclick="scrollToSection('education')">EDUCATION</button></li>
+        <li><button onclick="scrollToSection('skills')">SKILLS</button></li>
+        <li><button onclick="scrollToSection('project')">PROJECTS</button></li> <!-- Corrected section ID -->
+        <li><button onclick="scrollToSection('resume')">RESUME</button></li>
+    </ul>
+</nav>
+
+<section id="about">
+    <div class="section-content">
+        <h2>About Me</h2>
+        <p>Hello Everyone, NAVEENKUMAR FROM AVASC, THANJAVUR.</p>
+    </div>
+</section>
+
+<section id="education">
+    <div class="section-content">
+        <h2>Education</h2>
+        <p>Bsc., Computer science IIIrd Year AVASC</p>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="section-content">
+        <h2>Skills</h2>
+        <ul>
+            <li>FOOTBALLER, FREESTYLER</li>
+            <li>MIND READER</li>
+            <li>QUICK LEARNER TO NEW THINGS</li>
+        </ul>
+    </div>
+</section>
+
+<section id="project">
+    <div class="section-content">
+        <h2>projects</h2>
+        <ul>
+            <li><a href="#">Project 1</a></li>
+            <li><a href="#">Project 2</a></li>
+            <!-- Add more projects -->
+        </ul>
+    </div>
+</section>
+
+<section id="resume">
+    <center>
+        <div class="section-content">
+            <h2>resume</h2>
+            <a href="https://publuu.com/flip-book/282614/660097" class="download-button">Click to View Resume</a>
+        </div>
+    </center>
+</section>
+
+<footer>
+    <p>&copy; 2023 NAVEENKUMAR</p>
+</footer>
+
+<script>
+    function scrollToSection(sectionId) {
+        const targetElement = document.getElementById(sectionId);
+        
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+</script>
+</body>
+</html>
